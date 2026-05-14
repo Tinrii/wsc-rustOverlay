@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace Oxide.Plugins {
     [Info("RustOverlay", "TinTin", "1.0.0")]
     public class RustOverlay : RustPlugin {
-        private string serverUrl = "http://localhost:3001/update";
+        private string serverUrl = "https://weareaxora.com/update";
 
         class PlayerData {
             [JsonProperty("name")]

@@ -25,7 +25,7 @@ const avatarCache = {};
 async function getDiscordAvatar(discordId) {
     if (avatarCache[discordId]) return avatarCache[discordId];
     const token = process.env.DISCORD_BOT_TOKEN;
-    if (!token || token === "YOUR_BOT_TOKEN_HERE") return "";
+    if (!token) return "";
 
     try {
         const res = await fetch(`https://discord.com/api/v10/users/${discordId}`, { headers: { Authorization: `Bot ${token}` } });
