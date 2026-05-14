@@ -1,0 +1,124 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+#root {
+    position: absolute;
+    bottom: 8vh;
+    left: 1.5vw;
+    right: 1.5vw;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.hud {
+    min-width: 18vw;
+    min-width: 260px;
+    max-width: 420px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    margin-bottom: 0.5vh;
+    padding-left: 0.2vw;
+
+    font-size: 1.15vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.03vw;
+
+    color: #ffffff;
+    text-shadow: 0 0.1vh 0.3vh rgba(0, 0, 0, 0.8);
+}
+
+.teamContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35vh;
+}
+
+.playerWrapper {
+    width: 100%;
+}
+
+.playerRow {
+    display: grid;
+    grid-template-columns: 0.22vw minmax(20px, 1.6vw) 1fr 3.2vw 5.5vw 2.8vw;
+    align-items: center;
+    gap: 0.4vw;
+
+    height: 4.2vh;
+    padding: 0 0.5vw 0 0;
+
+    background: rgba(0, 0, 0, 0.72);
+    border: 0.05vw solid rgba(255, 255, 255, 0.04);
+    box-shadow: 0 0.4vh 1.2vh rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(0.15vw);
+}
+
+.strpe {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #ff2345, #b5001e);
+}
+
+.avatar {
+    width: 1.4vw;
+    height: 1.4vw;
+    min-width: 20px;
+    min-height: 20px;
+
+    border-radius: 0.1vw;
+    background: linear-gradient(135deg, #666, #222);
+    border: 0.05vw solid rgba(255, 255, 255, 0.06);
+}
+
+.name {
+    padding-left: 4px;
+    font-size: 0.85vw;
+    font-weight: 800;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    text-shadow: 0 0.1vh 0.2vh rgba(0, 0, 0, 0.7);
+}
+
+.hp {
+    font-size: 0.8vw;
+    font-weight: 900;
+    color: #ffffff;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.weapon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weapon img {
+    max-width: 5.2vw;
+    max-height: 3.2vh;
+    object-fit: contain;
+}
+
+.ammo {
+    font-size: 0.7vw;
+    font-weight: 800;
+    color: #8cff68;
+    text-align: right;
+    white-space: nowrap;
+}
