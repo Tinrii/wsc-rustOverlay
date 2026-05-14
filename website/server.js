@@ -148,7 +148,7 @@ io.on("connection", socket => {
     });
 });
 
-const development = false;
+const development = true;
 if (development) {
     setInterval(async () => {
         const teamMembers = playersConfig["marijica"];
@@ -193,9 +193,13 @@ app.get("/:team1", (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
 });
 
-app.get("/:team1/:team2", (req, res) => {
+app.get("/cast/:team1/:team2", (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
 });
+
+app.get("/maki/:team1", (req, res) => {
+    res.sendFile(__dirname + "/public/index.html");
+})
 
 server.listen(3696, () => {
     console.log("Server is running on port 3696");

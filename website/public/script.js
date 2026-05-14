@@ -7,8 +7,17 @@ function weaponIcon(shortname) {
 }
 
 const pathParts = window.location.pathname.substring(1).split('/').filter(p => p.trim() !== "");
-const teamsToTrack = pathParts.length > 0 ? pathParts : ["marijica"];
+const maki = pathParts.includes("maki")
+const cast = pathParts.includes("cast")
+let teamsToTrack = pathParts.length > 0 ? pathParts : ["marijica"];
+if (maki || cast) teamsToTrack.shift();
 const teamUIs = {};
+
+if (maki) {
+    document.head.innerHTML += `<link rel="stylesheet" href="/maki.css">`;
+} else {
+    document.head.innerHTML += `<link rel="stylesheet" href="/style.css">`;
+}
 
 teamsToTrack.forEach(team => {
     const hud = document.createElement("div");
