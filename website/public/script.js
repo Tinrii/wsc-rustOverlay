@@ -25,6 +25,11 @@ teamsToTrack.forEach(team => {
     hud.appendChild(playersContainer);
     root.appendChild(hud);
     
+    const advertisement = document.createElement("div");
+    advertisement.className = "advertisement";
+    advertisement.textContent = "weareaxora.com";
+    hud.appendChild(advertisement);
+    
     if (!teamUIs[team]) teamUIs[team] = [];
     teamUIs[team].push({ hud: hud, title: title, players: playersContainer });
 });
@@ -43,7 +48,6 @@ function renderOverlay(data) {
         ui.players.innerHTML = "";
 
         if (!data.players) return;
-
         data.players.forEach((p) => {
             const wrapper = document.createElement("div");
             wrapper.className = "playerWrapper";
@@ -66,7 +70,7 @@ function renderOverlay(data) {
 
             wrapper.innerHTML = `
                 <div class="playerRow">
-                    <div class="strpe"></div>
+                    <div class="stripe"></div>
                     <div class="avatar">${avatarContent}</div>
                     <div class="name">${p.name}</div>
                     <div class="hp">${hpDisplay}</div>

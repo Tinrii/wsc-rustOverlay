@@ -20,22 +20,22 @@ html, body {
 }
 
 .hud {
-    min-width: 18vw;
-    min-width: 260px;
-    max-width: 420px;
+    min-width: 22vw;
+    min-width: 320px;
+    max-width: 520px;
 
     display: flex;
     flex-direction: column;
 }
 
 .title {
-    margin-bottom: 0.5vh;
+    margin-bottom: 0.6vh;
     padding-left: 0.2vw;
 
-    font-size: 1.15vw;
+    font-size: 1.4vw;
     font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: 0.03vw;
+    letter-spacing: 0.04vw;
 
     color: #ffffff;
     text-shadow: 0 0.1vh 0.3vh rgba(0, 0, 0, 0.8);
@@ -53,11 +53,11 @@ html, body {
 
 .playerRow {
     display: grid;
-    grid-template-columns: 0.22vw minmax(20px, 1.6vw) 1fr 3.2vw 5.5vw 2.8vw;
+    grid-template-columns: 0.28vw minmax(25px, 2vw) 1fr 4vw 6.9vw 3.5vw;
     align-items: center;
-    gap: 0.4vw;
+    gap: 0.5vw;
 
-    height: 4.2vh;
+    height: 5.25vh;
     padding: 0 0.5vw 0 0;
 
     background: rgba(0, 0, 0, 0.72);
@@ -66,17 +66,23 @@ html, body {
     backdrop-filter: blur(0.15vw);
 }
 
-.strpe {
+.stripe {
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, #ff2345, #b5001e);
 }
 
+.advertisement {
+    font-size: 1vw;
+    padding: 1vh 0vh;
+    color: #ffffff;
+}
+
 .avatar {
-    width: 1.4vw;
-    height: 1.4vw;
-    min-width: 20px;
-    min-height: 20px;
+    width: 1.75vw;
+    height: 1.75vw;
+    min-width: 25px;
+    min-height: 25px;
 
     border-radius: 0.1vw;
     background: linear-gradient(135deg, #666, #222);
@@ -85,7 +91,7 @@ html, body {
 
 .name {
     padding-left: 4px;
-    font-size: 0.85vw;
+    font-size: 1.05vw;
     font-weight: 800;
 
     white-space: nowrap;
@@ -96,7 +102,7 @@ html, body {
 }
 
 .hp {
-    font-size: 0.8vw;
+    font-size: 1vw;
     font-weight: 900;
     color: #ffffff;
     text-align: center;
@@ -110,13 +116,13 @@ html, body {
 }
 
 .weapon img {
-    max-width: 5.2vw;
-    max-height: 3.2vh;
+    max-width: 6.5vw;
+    max-height: 4vh;
     object-fit: contain;
 }
 
 .ammo {
-    font-size: 0.7vw;
+    font-size: 0.85vw;
     font-weight: 800;
     color: #8cff68;
     text-align: right;
