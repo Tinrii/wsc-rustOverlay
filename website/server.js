@@ -205,6 +205,37 @@ app.get("/teamStats/:team1", (req, res) => {
     res.sendFile(__dirname + "/public/teamStats.html");
 })
 
+const LEADERBOARD_API_URL = "https://genuine-mindfulness-production-bd97.up.railway.app/leaderboard";
+const LEADERBOARD_CACHE_FILE = "leaderboardCache.json";
+
+async function fetchAndCacheLeaderboard() {
+    try {
+        const response = await fetch(LEADERBOARD_API_URL);
+        if (response.ok) {
+            const data = await response.json();
+            fs.writeFileSync(LEADERBOARD_CACHE_FILE, JSON.stringify(data, null, 2));
+        }
+    } catch (err) {
+        console.error("Error fetching leaderboard API:", err.message);
+    }
+}
+
+fetchAndCacheLeaderboard();
+setInterval(fetchAndCacheLeaderboard, 15000); // Fetch from remote every 15s
+
+app.get("/api/leaderboard", (req, res) => {
+    try {
+        if (fs.existsSync(LEADERBOARD_CACHE_FILE)) {
+            const data = fs.readFileSync(LEADERBOARD_CACHE_FILE, "utf8");
+            res.json(JSON.parse(data));
+        } else {
+            res.status(404).json({ error: "Leaderboard data not available" });
+        }
+    } catch (err) {
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
+
 server.listen(3696, () => {
     console.log("Server is running on port 3696");
 });

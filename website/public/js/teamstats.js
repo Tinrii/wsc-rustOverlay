@@ -9,7 +9,7 @@ async function fetchTeamStats() {
     }
 
     try {
-        const response = await fetch("https://genuine-mindfulness-production-bd97.up.railway.app/leaderboard");
+        const response = await fetch("/api/leaderboard");
         if (!response.ok) throw new Error("Failed to fetch data");
         const data = await response.json();
         
