@@ -189,22 +189,6 @@ if (development) {
     }, 2000);
 }
 
-app.get("/overlay/:team1", (req, res) => {
-    res.sendFile(__dirname + "/public/index.html");
-});
-
-app.get("/cast/:team1/:team2", (req, res) => {
-    res.sendFile(__dirname + "/public/index.html");
-});
-
-app.get("/overlay/maki/:team1", (req, res) => {
-    res.sendFile(__dirname + "/public/index.html");
-})
-
-app.get("/teamStats/:team1", (req, res) => {
-    res.sendFile(__dirname + "/public/teamStats.html");
-})
-
 const LEADERBOARD_API_URL = "https://genuine-mindfulness-production-bd97.up.railway.app/leaderboard";
 const LEADERBOARD_CACHE_FILE = "leaderboardCache.json";
 
@@ -221,7 +205,23 @@ async function fetchAndCacheLeaderboard() {
 }
 
 fetchAndCacheLeaderboard();
-setInterval(fetchAndCacheLeaderboard, 15000); // Fetch from remote every 15s
+setInterval(fetchAndCacheLeaderboard, 15000);
+
+app.get("/overlay/:team1", (req, res) => {
+    res.sendFile(__dirname + "/public/index.html");
+});
+
+app.get("/cast/:team1/:team2", (req, res) => {
+    res.sendFile(__dirname + "/public/index.html");
+});
+
+app.get("/overlay/maki/:team1", (req, res) => {
+    res.sendFile(__dirname + "/public/index.html");
+})
+
+app.get("/teamStats/:team1", (req, res) => {
+    res.sendFile(__dirname + "/public/teamStats.html");
+})
 
 app.get("/api/leaderboard", (req, res) => {
     try {
