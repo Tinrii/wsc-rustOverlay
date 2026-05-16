@@ -245,7 +245,7 @@ async function fetchAndCacheLeaderboard() {
 }
 
 fetchAndCacheLeaderboard();
-setInterval(fetchAndCacheLeaderboard, 15000);
+setInterval(fetchAndCacheLeaderboard, 5000);
 
 app.get("/overlay/:team1", (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
