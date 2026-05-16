@@ -148,7 +148,7 @@ io.on("connection", socket => {
     });
 });
 
-const development = true;
+const development = false;
 if (development) {
     setInterval(async () => {
         const teamMembers = playersConfig["marijica"];
@@ -189,7 +189,7 @@ if (development) {
     }, 2000);
 }
 
-app.get("/:team1", (req, res) => {
+app.get("/overlay/:team1", (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
 });
 
@@ -197,8 +197,12 @@ app.get("/cast/:team1/:team2", (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
 });
 
-app.get("/maki/:team1", (req, res) => {
+app.get("/overlay/maki/:team1", (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
+})
+
+app.get("/teamStats/:team1", (req, res) => {
+    res.sendFile(__dirname + "/public/teamStats.html");
 })
 
 server.listen(3696, () => {

@@ -1,0 +1,114 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    overflow: hidden;
+    font-family: "Arial Black", Impact, sans-serif;
+}
+
+#root {
+    position: absolute;
+    bottom: 8vh;
+    left: 1.5vw;
+    display: flex;
+    pointer-events: none;
+}
+
+.stats-hud {
+    background: rgba(12, 12, 12, 0.95);
+    border-left: 0.3vw solid #ffb3d7;
+    display: flex;
+    flex-direction: column;
+    padding: 1vw 1.5vw 1vw 1.2vw;
+    min-width: 22vw;
+    box-shadow: 0 0.5vh 1.5vh rgba(0, 0, 0, 0.5);
+}
+
+.stats-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.stats-title {
+    color: #39ff14;
+    font-size: 2.2vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05vw;
+    line-height: 1;
+}
+
+.stats-rank-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1vw;
+}
+
+.stats-label {
+    color: #777;
+    font-size: 0.75vw;
+    font-weight: 900;
+    letter-spacing: 0.1vw;
+    font-family: Arial, sans-serif;
+    margin-bottom: 0.2vw;
+}
+
+.stats-rank-val {
+    color: #ffc107;
+    font-size: 1.6vw;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.stats-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.15);
+    margin: 0.8vw 0;
+    width: 70%;
+}
+
+.stats-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.stats-points-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.stats-points-val {
+    color: #fff;
+    font-size: 4.5vw;
+    font-weight: 900;
+    line-height: 1;
+    margin-top: 0.5vw;
+}
+
+.stats-logo-box {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.stats-logo {
+    max-height: 6.5vw;
+    object-fit: contain;
+    margin-bottom: -1vw;
+    margin-right: -1vw;
+}
+
+.error-msg {
+    font-size: 1.5vw;
+    color: white;
+    padding: 1vw;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.8);
+    font-family: Arial, sans-serif;
+}

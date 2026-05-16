@@ -9,14 +9,16 @@ function weaponIcon(shortname) {
 const pathParts = window.location.pathname.substring(1).split('/').filter(p => p.trim() !== "");
 const maki = pathParts.includes("maki")
 const cast = pathParts.includes("cast")
+const overlay = pathParts.includes("overlay"); 
+
 let teamsToTrack = pathParts.length > 0 ? pathParts : ["marijica"];
-if (maki || cast) teamsToTrack.shift();
+if (maki || cast || overlay) teamsToTrack.shift();
 const teamUIs = {};
 
 if (maki) {
-    document.head.innerHTML += `<link rel="stylesheet" href="/maki.css">`;
+    document.head.innerHTML += `<link rel="stylesheet" href="/css/maki.css">`;
 } else {
-    document.head.innerHTML += `<link rel="stylesheet" href="/style.css">`;
+    document.head.innerHTML += `<link rel="stylesheet" href="/css/style.css">`;
 }
 
 teamsToTrack.forEach(team => {
