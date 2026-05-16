@@ -2,17 +2,19 @@ const pathParts = window.location.pathname.substring(1).split('/').filter(p => p
 const teamNameRaw = pathParts[1];
 const root = document.getElementById('root');
 
-async function fetchTeamStats() {
+const socket = io();
+
+socket.on("connect", () => {
+    socket.emit("get_leaderboard");
+});
+
+socket.on("leaderboard:update", (data) => {
     if (!teamNameRaw) {
         root.innerHTML = "<div class='error-msg'>No team specified in the URL.</div>";
         return;
     }
 
     try {
-        const response = await fetch("/api/leaderboard");
-        if (!response.ok) throw new Error("Failed to fetch data");
-        const data = await response.json();
-        
         const teamData = data.teams.find(t => t.name.toLowerCase() === teamNameRaw.toLowerCase());
         
         if (teamData) {
@@ -39,10 +41,6 @@ async function fetchTeamStats() {
             `;
         }
     } catch (error) {
-        console.error("Error fetching team stats:", error);
+        console.error("Error processing team stats:", error);
     }
-}
-
-
-fetchTeamStats();
-setInterval(fetchTeamStats, 10000);
+});

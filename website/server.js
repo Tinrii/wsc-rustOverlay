@@ -47,25 +47,48 @@ async function getDiscordAvatar(discordId) {
 let teamDataCache = {};
 
 async function initCache() {
+    let savedCache = {};
+    if (fs.existsSync("teamDataCache.json")) {
+        try {
+            savedCache = JSON.parse(fs.readFileSync("teamDataCache.json", "utf8"));
+        } catch (e) {
+            console.error("Error reading teamDataCache.json:", e.message);
+        }
+    }
+
     for (const [teamName, members] of Object.entries(playersConfig)) {
         const teamData = { teamName: teamName, players: [] };
+        const savedTeamData = savedCache[teamName];
+
         for (const member of members) {
             let avatarUrl = "";
             if (member.discordid && member.discordid !== "none") {
                 avatarUrl = await getDiscordAvatar(member.discordid);
             }
-            teamData.players.push({
-                name: member.name === "none" ? "" : member.name,
-                steamid: member.steamid,
-                health: 0,
-                maxHealth: 100,
-                isWounded: false,
-                isDead: false,
-                weapon: "none",
-                ammo: "0/0",
-                avatar: avatarUrl,
-                isOffline: true
-            });
+            
+            let savedPlayer = null;
+            if (savedTeamData && savedTeamData.players) {
+                savedPlayer = savedTeamData.players.find(p => p.steamid === member.steamid);
+            }
+
+            if (savedPlayer) {
+                savedPlayer.avatar = avatarUrl || savedPlayer.avatar;
+                savedPlayer.name = member.name === "none" ? savedPlayer.name : member.name;
+                teamData.players.push(savedPlayer);
+            } else {
+                teamData.players.push({
+                    name: member.name === "none" ? "" : member.name,
+                    steamid: member.steamid,
+                    health: 0,
+                    maxHealth: 100,
+                    isWounded: false,
+                    isDead: false,
+                    weapon: "none",
+                    ammo: "0/0",
+                    avatar: avatarUrl,
+                    isOffline: true
+                });
+            }
         }
         teamDataCache[teamName] = teamData;
     }
@@ -121,6 +144,12 @@ app.post("/update", async (req, res) => {
         io.to(teamName).emit("overlay:update", teamData);
     }
 
+    try {
+        fs.writeFileSync("teamDataCache.json", JSON.stringify(teamDataCache, null, 2));
+    } catch (e) {
+        console.error("Error writing teamDataCache.json:", e.message);
+    }
+
     res.json({ ok: true });
 })
 
@@ -130,6 +159,16 @@ io.on("connection", socket => {
     socket.on("join_team", (teamName) => {
         socket.join(teamName);
         if (teamDataCache[teamName]) socket.emit("overlay:update", teamDataCache[teamName]);
+    });
+    socket.on("get_leaderboard", () => {
+        if (fs.existsSync(LEADERBOARD_CACHE_FILE)) {
+            try {
+                const data = fs.readFileSync(LEADERBOARD_CACHE_FILE, "utf8");
+                socket.emit("leaderboard:update", JSON.parse(data));
+            } catch (err) {
+                console.error("Error reading leaderboard cache:", err);
+            }
+        }
     });
     socket.on("missing_weapon", async (weapon) => {
         if (!missingWeapons.has(weapon)) {
@@ -198,6 +237,7 @@ async function fetchAndCacheLeaderboard() {
         if (response.ok) {
             const data = await response.json();
             fs.writeFileSync(LEADERBOARD_CACHE_FILE, JSON.stringify(data, null, 2));
+            io.emit("leaderboard:update", data);
         }
     } catch (err) {
         console.error("Error fetching leaderboard API:", err.message);
