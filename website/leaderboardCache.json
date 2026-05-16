@@ -1,5 +1,5 @@
 {
-  "updated_unix": 1778969880,
+  "updated_unix": 1778970361,
   "teams": [
     {
       "name": "Galaksy",
@@ -49,7 +49,7 @@
     },
     {
       "name": "Wondery",
-      "score": 291,
+      "score": 296,
       "members": [
         {
           "steam_id": "76561199049352507",
@@ -57,7 +57,7 @@
         },
         {
           "steam_id": "76561199064916285",
-          "name": "76561199064916285"
+          "name": "thereal ⁧⁧zews"
         },
         {
           "steam_id": "76561198434348440",
@@ -164,7 +164,7 @@
     },
     {
       "name": "Nuni",
-      "score": 246,
+      "score": 248,
       "members": [
         {
           "steam_id": "76561198263477419",
@@ -186,6 +186,29 @@
       "rank": 8
     },
     {
+      "name": "Leksa",
+      "score": 228,
+      "members": [
+        {
+          "steam_id": "76561199036473774",
+          "name": "lxs"
+        },
+        {
+          "steam_id": "76561198213853381",
+          "name": "MeDoo ツ"
+        },
+        {
+          "steam_id": "76561198344116408",
+          "name": "Grca"
+        },
+        {
+          "steam_id": "76561198138214925",
+          "name": "Kimi"
+        }
+      ],
+      "rank": 9
+    },
+    {
       "name": "DoubleAiM",
       "score": 227,
       "members": [
@@ -204,29 +227,6 @@
         {
           "steam_id": "76561198087079888",
           "name": "Markonix"
-        }
-      ],
-      "rank": 9
-    },
-    {
-      "name": "Leksa",
-      "score": 222,
-      "members": [
-        {
-          "steam_id": "76561199036473774",
-          "name": "lxs"
-        },
-        {
-          "steam_id": "76561198213853381",
-          "name": "MeDoo ツ"
-        },
-        {
-          "steam_id": "76561198344116408",
-          "name": "Grca"
-        },
-        {
-          "steam_id": "76561198138214925",
-          "name": "Kimi"
         }
       ],
       "rank": 10
@@ -256,7 +256,7 @@
     },
     {
       "name": "Twajs",
-      "score": 187,
+      "score": 189,
       "members": [
         {
           "steam_id": "76561199471782133",
@@ -283,7 +283,7 @@
       "members": [
         {
           "steam_id": "76561198058135580",
-          "name": "GUH"
+          "name": "76561198058135580"
         },
         {
           "steam_id": "76561198289752136",
@@ -325,7 +325,7 @@
     },
     {
       "name": "Jevta",
-      "score": 147,
+      "score": 151,
       "members": [
         {
           "steam_id": "76561199151380392",
@@ -417,7 +417,7 @@
     },
     {
       "name": "Delic",
-      "score": 93,
+      "score": 97,
       "members": [
         {
           "steam_id": "76561199510348937",
@@ -463,7 +463,7 @@
     },
     {
       "name": "Fixedinho",
-      "score": 70,
+      "score": 71,
       "members": [
         {
           "steam_id": "76561198185315935",
