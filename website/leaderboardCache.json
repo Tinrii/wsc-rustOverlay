@@ -1,9 +1,9 @@
 {
-  "updated_unix": 1778970361,
+  "updated_unix": 1778980662,
   "teams": [
     {
       "name": "Galaksy",
-      "score": 423,
+      "score": 475,
       "members": [
         {
           "steam_id": "76561198128572985",
@@ -23,6 +23,29 @@
         }
       ],
       "rank": 1
+    },
+    {
+      "name": "Wondery",
+      "score": 368,
+      "members": [
+        {
+          "steam_id": "76561199049352507",
+          "name": "wondery"
+        },
+        {
+          "steam_id": "76561199064916285",
+          "name": "76561199064916285"
+        },
+        {
+          "steam_id": "76561198434348440",
+          "name": "Selovich"
+        },
+        {
+          "steam_id": "76561199378430000",
+          "name": "andi.rust"
+        }
+      ],
+      "rank": 2
     },
     {
       "name": "PeroMartic",
@@ -45,34 +68,34 @@
           "name": "DFBully"
         }
       ],
-      "rank": 2
-    },
-    {
-      "name": "Wondery",
-      "score": 296,
-      "members": [
-        {
-          "steam_id": "76561199049352507",
-          "name": "wondery"
-        },
-        {
-          "steam_id": "76561199064916285",
-          "name": "thereal ⁧⁧zews"
-        },
-        {
-          "steam_id": "76561198434348440",
-          "name": "Selovich"
-        },
-        {
-          "steam_id": "76561199378430000",
-          "name": "andi.rust"
-        }
-      ],
       "rank": 3
     },
     {
+      "name": "EuroDrmex",
+      "score": 322,
+      "members": [
+        {
+          "steam_id": "76561199083844551",
+          "name": "EuroDrmex"
+        },
+        {
+          "steam_id": "76561198860484188",
+          "name": "drazinj0"
+        },
+        {
+          "steam_id": "76561198028323149",
+          "name": "hi"
+        },
+        {
+          "steam_id": "76561198973476686",
+          "name": "Lale"
+        }
+      ],
+      "rank": 4
+    },
+    {
       "name": "Nugato",
-      "score": 287,
+      "score": 303,
       "members": [
         {
           "steam_id": "76561198443158397",
@@ -91,7 +114,7 @@
           "name": "nugato"
         }
       ],
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "Layz",
@@ -114,34 +137,11 @@
           "name": "76561198442105964"
         }
       ],
-      "rank": 5
-    },
-    {
-      "name": "EuroDrmex",
-      "score": 281,
-      "members": [
-        {
-          "steam_id": "76561199083844551",
-          "name": "EuroDrmex"
-        },
-        {
-          "steam_id": "76561198860484188",
-          "name": "drazinj0"
-        },
-        {
-          "steam_id": "76561198028323149",
-          "name": "hi"
-        },
-        {
-          "steam_id": "76561198973476686",
-          "name": "Lale"
-        }
-      ],
       "rank": 6
     },
     {
       "name": "Ljatif",
-      "score": 268,
+      "score": 283,
       "members": [
         {
           "steam_id": "76561197996916974",
@@ -163,31 +163,8 @@
       "rank": 7
     },
     {
-      "name": "Nuni",
-      "score": 248,
-      "members": [
-        {
-          "steam_id": "76561198263477419",
-          "name": "nuni"
-        },
-        {
-          "steam_id": "76561198054672905",
-          "name": "Julius Cheeser"
-        },
-        {
-          "steam_id": "76561198099212451",
-          "name": "InvokerWiggle"
-        },
-        {
-          "steam_id": "76561198052109415",
-          "name": "maRioxy"
-        }
-      ],
-      "rank": 8
-    },
-    {
       "name": "Leksa",
-      "score": 228,
+      "score": 271,
       "members": [
         {
           "steam_id": "76561199036473774",
@@ -204,6 +181,29 @@
         {
           "steam_id": "76561198138214925",
           "name": "Kimi"
+        }
+      ],
+      "rank": 8
+    },
+    {
+      "name": "Nuni",
+      "score": 253,
+      "members": [
+        {
+          "steam_id": "76561198263477419",
+          "name": "nuni"
+        },
+        {
+          "steam_id": "76561198054672905",
+          "name": "Julius Cheeser"
+        },
+        {
+          "steam_id": "76561198099212451",
+          "name": "InvokerWiggle"
+        },
+        {
+          "steam_id": "76561198052109415",
+          "name": "maRioxy"
         }
       ],
       "rank": 9
@@ -233,7 +233,7 @@
     },
     {
       "name": "Zvakica",
-      "score": 205,
+      "score": 210,
       "members": [
         {
           "steam_id": "76561199078999436",
@@ -256,7 +256,7 @@
     },
     {
       "name": "Twajs",
-      "score": 189,
+      "score": 195,
       "members": [
         {
           "steam_id": "76561199471782133",
@@ -278,31 +278,8 @@
       "rank": 12
     },
     {
-      "name": "GUH",
-      "score": 171,
-      "members": [
-        {
-          "steam_id": "76561198058135580",
-          "name": "76561198058135580"
-        },
-        {
-          "steam_id": "76561198289752136",
-          "name": "Ilija Boogie"
-        },
-        {
-          "steam_id": "76561199141169679",
-          "name": "Urke"
-        },
-        {
-          "steam_id": "76561199003182481",
-          "name": "✪_Z_V_E_R_✪"
-        }
-      ],
-      "rank": 13
-    },
-    {
       "name": "Genije",
-      "score": 171,
+      "score": 182,
       "members": [
         {
           "steam_id": "76561197977188239",
@@ -321,11 +298,34 @@
           "name": "Lemon"
         }
       ],
+      "rank": 13
+    },
+    {
+      "name": "GUH",
+      "score": 172,
+      "members": [
+        {
+          "steam_id": "76561198058135580",
+          "name": "76561198058135580"
+        },
+        {
+          "steam_id": "76561198289752136",
+          "name": "Ilija Boogie"
+        },
+        {
+          "steam_id": "76561199141169679",
+          "name": "Urke"
+        },
+        {
+          "steam_id": "76561199003182481",
+          "name": "✪_Z_V_E_R_✪"
+        }
+      ],
       "rank": 14
     },
     {
       "name": "Jevta",
-      "score": 151,
+      "score": 163,
       "members": [
         {
           "steam_id": "76561199151380392",
@@ -333,7 +333,7 @@
         },
         {
           "steam_id": "76561199195003704",
-          "name": "dvmir™"
+          "name": "76561199195003704"
         },
         {
           "steam_id": "76561199215218273",
@@ -348,7 +348,7 @@
     },
     {
       "name": "CholaPC",
-      "score": 124,
+      "score": 125,
       "members": [
         {
           "steam_id": "76561199487539299",
@@ -370,8 +370,31 @@
       "rank": 16
     },
     {
+      "name": "Delic",
+      "score": 107,
+      "members": [
+        {
+          "steam_id": "76561199510348937",
+          "name": "DELA NEDELA"
+        },
+        {
+          "steam_id": "76561199378289499",
+          "name": "shmizlica"
+        },
+        {
+          "steam_id": "76561198067198248",
+          "name": "TasteLess"
+        },
+        {
+          "steam_id": "76561198422147204",
+          "name": "miwo 24 |the end|"
+        }
+      ],
+      "rank": 17
+    },
+    {
       "name": "Gazda",
-      "score": 104,
+      "score": 105,
       "members": [
         {
           "steam_id": "76561199317181175",
@@ -390,7 +413,7 @@
           "name": "Cvike"
         }
       ],
-      "rank": 17
+      "rank": 18
     },
     {
       "name": "Zile",
@@ -413,57 +436,11 @@
           "name": "qqq"
         }
       ],
-      "rank": 18
-    },
-    {
-      "name": "Delic",
-      "score": 97,
-      "members": [
-        {
-          "steam_id": "76561199510348937",
-          "name": "DELA NEDELA"
-        },
-        {
-          "steam_id": "76561199378289499",
-          "name": "shmizlica"
-        },
-        {
-          "steam_id": "76561198067198248",
-          "name": "TasteLess"
-        },
-        {
-          "steam_id": "76561198422147204",
-          "name": "miwo 24 |the end|"
-        }
-      ],
       "rank": 19
     },
     {
-      "name": "Marijica",
-      "score": 86,
-      "members": [
-        {
-          "steam_id": "76561198155335144",
-          "name": "marijica"
-        },
-        {
-          "steam_id": "76561198894713717",
-          "name": "76561198894713717"
-        },
-        {
-          "steam_id": "76561198963735583",
-          "name": "TinTin™"
-        },
-        {
-          "steam_id": "76561198446046400",
-          "name": "Neske"
-        }
-      ],
-      "rank": 20
-    },
-    {
       "name": "Fixedinho",
-      "score": 71,
+      "score": 91,
       "members": [
         {
           "steam_id": "76561198185315935",
@@ -482,11 +459,34 @@
           "name": "Holland"
         }
       ],
+      "rank": 20
+    },
+    {
+      "name": "Marijica",
+      "score": 86,
+      "members": [
+        {
+          "steam_id": "76561198155335144",
+          "name": "marijica"
+        },
+        {
+          "steam_id": "76561198894713717",
+          "name": "Gio"
+        },
+        {
+          "steam_id": "76561198963735583",
+          "name": "TinTin™"
+        },
+        {
+          "steam_id": "76561198446046400",
+          "name": "Neske"
+        }
+      ],
       "rank": 21
     },
     {
       "name": "Belan",
-      "score": 70,
+      "score": 84,
       "members": [
         {
           "steam_id": "76561197993665691",
@@ -517,7 +517,7 @@
         },
         {
           "steam_id": "76561198983513324",
-          "name": "DΛVID"
+          "name": "76561198983513324"
         },
         {
           "steam_id": "76561199473118348",
@@ -532,7 +532,7 @@
     },
     {
       "name": "Vanimy",
-      "score": 59,
+      "score": 60,
       "members": [
         {
           "steam_id": "76561198094405430",
@@ -548,14 +548,14 @@
         },
         {
           "steam_id": "76561199381051080",
-          "name": "Bozomafija"
+          "name": "76561199381051080"
         }
       ],
       "rank": 24
     },
     {
       "name": "NTeam",
-      "score": 36,
+      "score": 38,
       "members": [
         {
           "steam_id": "76561199892477136",
@@ -563,15 +563,15 @@
         },
         {
           "steam_id": "76561198119089976",
-          "name": "Uros"
+          "name": "76561198119089976"
         },
         {
           "steam_id": "76561198847904180",
-          "name": "Mujke"
+          "name": "76561198847904180"
         },
         {
           "steam_id": "76561198037669858",
-          "name": "Nedim Lepic"
+          "name": "76561198037669858"
         }
       ],
       "rank": 25

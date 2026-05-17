@@ -18,7 +18,7 @@ html, body {
 
 .stats-hud {
     background: rgba(12, 12, 12, 0.95);
-    border-left: 0.3vw solid #ffb3d7;
+    border-left: 0.3vw solid #ffc107;
     display: flex;
     flex-direction: column;
     padding: 1vw 1.5vw 1vw 1.2vw;
@@ -33,7 +33,7 @@ html, body {
 }
 
 .stats-title {
-    color: #39ff14;
+    color: #ffc107;
     font-size: 2.2vw;
     font-weight: 900;
     text-transform: uppercase;
@@ -83,7 +83,7 @@ html, body {
 }
 
 .stats-points-val {
-    color: #fff;
+    color: #ffc107;
     font-size: 4.5vw;
     font-weight: 900;
     line-height: 1;
