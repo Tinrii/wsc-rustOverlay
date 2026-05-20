@@ -21,6 +21,11 @@ if (maki) {
     document.head.innerHTML += `<link rel="stylesheet" href="/css/style.css">`;
 }
 
+if (teamsToTrack.length > 1) {
+    root.classList.add("multi-team");
+}
+
+
 teamsToTrack.forEach(team => {
     const hud = document.createElement("div");
     hud.className = "hud";
@@ -31,6 +36,10 @@ teamsToTrack.forEach(team => {
     
     const playersContainer = document.createElement("div");
     playersContainer.className = "teamContainer";
+
+    if (cast) {
+        hud.classList.add("cast");
+    }
     
     hud.appendChild(title);
     hud.appendChild(playersContainer);

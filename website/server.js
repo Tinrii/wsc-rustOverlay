@@ -15,10 +15,10 @@ app.get("/", (req, res) => {
 app.use(express.static("public"));
 
 let playersConfig = {};
-try { 
-    playersConfig = JSON.parse(fs.readFileSync("players.json", "utf8")); 
-} catch (err) { 
-    console.error("Could not load players.json:", err.message); 
+try {
+    playersConfig = JSON.parse(fs.readFileSync("players.json", "utf8"));
+} catch (err) {
+    console.error("Could not load players.json:", err.message);
 }
 
 const avatarCache = {};
@@ -65,7 +65,7 @@ async function initCache() {
             if (member.discordid && member.discordid !== "none") {
                 avatarUrl = await getDiscordAvatar(member.discordid);
             }
-            
+
             let savedPlayer = null;
             if (savedTeamData && savedTeamData.players) {
                 savedPlayer = savedTeamData.players.find(p => p.steamid === member.steamid);
@@ -100,10 +100,10 @@ app.post("/update", async (req, res) => {
 
     for (const [teamName, members] of Object.entries(playersConfig)) {
         const teamData = { teamName: teamName, players: [] };
-        
+
         for (const member of members) {
             const livePlayer = rawData?.players?.find(p => p.steamid === member.steamid);
-            
+
             let avatarUrl = "";
             if (member.discordid) avatarUrl = await getDiscordAvatar(member.discordid);
 
@@ -111,7 +111,7 @@ app.post("/update", async (req, res) => {
                 if (livePlayer.health == livePlayer.maxHealth) livePlayer.health = livePlayer.maxHealth - 1;
                 if (livePlayer.health > livePlayer.maxHealth) livePlayer.health = livePlayer.maxHealth;
                 if (livePlayer.weapon === "rocket.launcher.rpg7") livePlayer.weapon = "rocket.launcher";
-                
+
                 teamData.players.push({
                     name: livePlayer.name || member.name,
                     steamid: member.steamid,
@@ -139,7 +139,7 @@ app.post("/update", async (req, res) => {
                 });
             }
         }
-        
+
         teamDataCache[teamName] = teamData;
         io.to(teamName).emit("overlay:update", teamData);
     }
@@ -262,6 +262,29 @@ app.get("/overlay/maki/:team1", (req, res) => {
 app.get("/teamStats/:team1", (req, res) => {
     res.sendFile(__dirname + "/public/teamStats.html");
 })
+
+app.post("/serverStatus", (req, res) => {
+    const { players, maxPlayers, queue } = req.body;
+    serverStatus.players = players;
+    serverStatus.maxPlayers = maxPlayers;
+    serverStatus.queue = queue;
+
+    fs.writeFileSync("serverStatus.json", JSON.stringify(serverStatus, null, 2));
+    res.json({ ok: true });
+})
+
+app.get("/serverStatus", (req, res) => {
+    try {
+        if (fs.existsSync("serverStatus.json")) {
+            const data = fs.readFileSync("serverStatus.json", "utf8");
+            res.json(JSON.parse(data));
+        } else {
+            res.status(404).json({ error: "Server status data not available" });
+        }
+    } catch (err) {
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
 
 app.get("/api/leaderboard", (req, res) => {
     try {

@@ -128,3 +128,20 @@ html, body {
     text-align: right;
     white-space: nowrap;
 }
+
+/* Cast mode specific scaling for multiple teams */
+#root.multi-team .hud.cast {
+    transform: scale(0.6);
+}
+
+#root.multi-team .hud.cast:first-child {
+    transform-origin: bottom left;
+}
+
+#root.multi-team .hud.cast:last-child {
+    transform-origin: bottom right;
+}
+
+#root.multi-team .hud.cast:not(:first-child):not(:last-child) {
+    transform-origin: bottom center;
+}
